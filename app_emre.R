@@ -10,7 +10,7 @@ library(RColorBrewer)
 library(scales)
 
 
-my_df <- readRDS("C:/Users/emrey/Desktop/Centennial/MEF COURSE/R Exercises/Week 7-9 Group Project/isbike_20201118.rds")
+my_df <- readRDS("[file_path]/isbike_20201118.rds")
 json_df <- fromJSON(my_df)
 final_df <- json_df[["dataList"]]
 
