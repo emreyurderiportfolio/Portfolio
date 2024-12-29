@@ -9,12 +9,12 @@ library(lubridate)
 library(RColorBrewer)
 library(scales)
 
-
+#Load the data
 my_df <- readRDS("[file_path]/isbike_20201118.rds")
 json_df <- fromJSON(my_df)
 final_df <- json_df[["dataList"]]
 
-
+# Transform the data into a tidy format
 isbike_df <- final_df %>% 
     transmute(StationNo = as.integer(istasyon_no), 
               StationName = adi, 
@@ -37,6 +37,7 @@ isbike_df$StationNo[isbike_df$StationName == "Florya Sosyal Tesisler 1"] <- 6003
 isbike_df$StationNo[isbike_df$StationName == "Florya Sosyal Tesisler 2"] <- 6004
 isbike_df$StationNo[isbike_df$StationName == "Güneş Plajı"] <- 6005
 
+# Separate data into different regions
 anatolia_station <- isbike_df %>%
     filter((StationNo > 1000) & (StationNo <1899))
 
@@ -46,11 +47,13 @@ europe_station <- isbike_df %>%
 test_station <- isbike_df %>%
     filter((StationNo > 1899) & (StationNo <2000))
 
+# Count stations in each region
 anatolia_count <- nrow(anatolia_station)
 europe_count <- nrow(europe_station)
 test_count <- nrow(test_station)
 total_count <- nrow(isbike_df)
 
+# Prepare data for pie chart
 station_types <- data.frame(
   StationGroup = c("Anatolia", "Europe", "Test"),
   StationNumber = c(
@@ -60,9 +63,7 @@ station_types <- data.frame(
   )
 )
 
-
-#station_types
-
+# Create a pie chart showing station distribution by region
 bp <- ggplot(data = station_types, aes(x = "", y = StationNumber, fill = StationGroup)) +
   geom_bar(width = 1, stat = "identity")
 pie <- bp + coord_polar("y", start = 0) +
@@ -142,7 +143,7 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     
-    
+    # Render leaflet map for general overview
     output$isbikeMap <- renderLeaflet({
 
         map_df <- isbike_df %>%
@@ -171,9 +172,8 @@ server <- function(input, output) {
                  y="Latitude")
     })
     
-    output$isbikeCapacity <- renderPlot({
-        
-        
+    # Plot capacity distribution
+    output$isbikeCapacity <- renderPlot({  
         plot_df <- isbike_df %>% 
             filter(Capacity > 0) %>%
             count(Capacity, name = "Count") %>%
@@ -190,9 +190,8 @@ server <- function(input, output) {
         
     })
     
+    #  Render pie chart for station distribution
     output$pie <- renderPlot({
-        
-        
         anatolia_station <- isbike_df %>%
             filter((StationNo > 1000) & (StationNo <1899))
         
@@ -234,8 +233,10 @@ server <- function(input, output) {
         pie
     })
     
+    # Render interactive map for availability
     output$leafletMap <- renderLeaflet({
         
+        # Filter stations based on input criteria
         isbike_df <- isbike_df
         isbike_df$StationNo[isbike_df$StationName == "Dragos Şehir Üniversitesi"] <- 1001
         isbike_df$StationNo[isbike_df$StationName == "Rönepark Sahil"] <- 6001
@@ -289,6 +290,7 @@ server <- function(input, output) {
         
     })  
     
+    # Render data table for station information
     output$isbikeTable <- renderDT({
         
         isbike_df <- isbike_df
