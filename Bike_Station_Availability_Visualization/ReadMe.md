@@ -4,7 +4,7 @@
 
 This R Shiny Application provides an interactive visualization regarding the Isbike stations' coordinates, availability status, station names and the last time that connected to the system wile getting the report. 
 
-The data is provided from IBB Open Data Portal
+The data is provided from [IBB Open Data Portal](https://data.ibb.gov.tr/)
 
 ## Key Features
 
@@ -33,14 +33,14 @@ https://eyurderi.shinyapps.io/bike_station_availability_visualization/
 ## Installation
 
 1. Clone the repository
-   `code https://github.com/emreyurderiportfolio/Portfolio/tree/main/Bike_Station_Availability_Visualization` 
+   `https://github.com/emreyurderiportfolio/Portfolio/tree/main/Bike_Station_Availability_Visualization` 
 2. Navigate to the project directory
 3. Create a virtual environment and activate it
 4. Install dependencies
-   `code deps <- readLines("[file_path]/requirements.txt")
+   `deps <- readLines("[file_path]/requirements.txt")
     install.packages(deps)`
 5. Run in command prompt
-   `code Rscript app.R`
+   `Rscript app.R`
 
 
 
