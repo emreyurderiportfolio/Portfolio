@@ -1,0 +1,10 @@
+shiny
+tidyverse
+jsonlite
+ggplot2
+DT
+leaflet
+lubridate
+RColorBrewer
+scales
+rsconnect
