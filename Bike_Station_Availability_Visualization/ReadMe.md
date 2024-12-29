@@ -1,4 +1,4 @@
-# Project Title: Interactive Bike Station Analyzer with Shiny App in R
+# Interactive Bike Station Analyzer with Shiny App in R
 
 ## Introduction
 
