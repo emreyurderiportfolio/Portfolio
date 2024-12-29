@@ -73,17 +73,21 @@ The dataset includes reviews with the following key columns:
 
 1. **Clone the Repository:**
    
-   `git clone https://github.com/your-username/sentiment-analysis.git`
+   `git clone https://github.com/emreyurderiportfolio/Portfolio.git`
 
-2. **Install Dependencies**
+2. **Locate The Folder**
+   
+   `cd /Portfolio/Amazon_Reviews_Sentiment_Analysis`
+   
+3. **Install Dependencies**
 
     `pip install -r requirements.txt`
 
-3. **Run The Notebook**
+4. **Run The Notebook**
    
    Open and run Sentiment_Analysis.ipynb in a Jupyter Notebook environment.
 
-4. **Analyze Results**
+5. **Analyze Results**
 
     Explore the charts and metrics generated in the notebook to compare the performance of VADER and TextBlob.
 
