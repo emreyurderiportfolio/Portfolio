@@ -11,6 +11,12 @@ This project focuses on predicting high-demand regions for vehicle positioning b
 - **Demand Prediction:** Probabilities of high demand in specific grids for the following hours are aligned with historical data trends.
 - **Time-Based Features:** Utilizes cyclic time features and lagged demand values to enhance prediction accuracy.
 
+## Dataset Overview
+A mock dataset was created to demonstrate the approaches and methods used in the actual project due to an NDA agreement. Dataset contains the following data types
+- Coordinates (latitude-longitude)
+- Date time information
+- Drive time and distance
+
 ## Project Workflow
 
 1. **Data Preparation:**
