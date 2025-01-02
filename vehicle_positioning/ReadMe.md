@@ -1,5 +1,20 @@
 # Vehicle Positioning and Demand Prediction Using Deep Learning
 
+## TL;DR
+
+**Objective:** Predicting spatio-temporal data using advanced deep learning models and creating an interactive visualization.
+
+**Project Steps and Used Methods:** 
+- Data analysis and visualiztion
+- Time-series analysis
+- Interactive map visualization
+- Geopandas dataframe transformation
+- K-means clustering
+- Predictive modelling with FCNN, attention-based custom deep learning model and the Transformer model.
+- Performance evaluation with precision, recall and F1-scores.
+
+**Used Libraries:** Pandas, Numpy, Tensorflow, Scikit-learn, Statsmodels, Cartopy, Folium, Matplotlib, Seaborn 
+
 ## Project Description
 
 This project focuses on predicting high-demand regions for vehicle positioning based on historical demand data and time-based features. Various deep learning models, including fully connected neural networks and advanced models like Transformers, were tested to identify optimal strategies. The project leverages the attention mechanism to improve prediction accuracy by focusing on critical features such as lag values and cyclic time-based patterns.
