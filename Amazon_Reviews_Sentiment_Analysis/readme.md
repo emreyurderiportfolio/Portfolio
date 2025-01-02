@@ -12,7 +12,7 @@
 - Sentiment classification
 - Performance evaluation and visualization (accuracy, precision, recall and F1-score)
 
-**Used Libraries:** Pandas, nltk, VaderSentiment, Textblob, Scikit-learn, Matplotlib, Seaborn 
+**Used Libraries:** Pandas, nltk, VaderSentiment, Textblob, Scikit-learn, Matplotlib, Seaborn
 
 ## Project Description
 

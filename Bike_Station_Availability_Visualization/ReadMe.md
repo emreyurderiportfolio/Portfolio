@@ -1,5 +1,18 @@
 # Interactive Bike Station Analyzer with Shiny App in R
 
+# TL;DR
+
+**Objective:** Create an interactive visualization tool for Isbike stations to display availability, station details, and their geographic distribution using Shiny App in R.
+
+**Project Steps and Used Methods:** 
+- Dataset preprocessing (data type transformation, data cleaning and clustering etc.)
+- Data visualization utilizing ggplot
+- Creating the UI design of the Shiny App
+- Designing the server function and implementing the corresponding interactive maps along with the table
+- Deploying the app to the [ShinyApps.io](https://eyurderi.shinyapps.io/bike_station_availability_visualization/).
+
+**Used Libraries:** Shiny, tidyverse,jsonlite, ggplot2, DT, leaflet, lubridate, RColorBrewer, scales, rsconnect
+
 ## Introduction
 
 This R Shiny Application provides an interactive visualization regarding the Isbike stations' coordinates, availability status, station names and the last time that connected to the system wile getting the report. 
