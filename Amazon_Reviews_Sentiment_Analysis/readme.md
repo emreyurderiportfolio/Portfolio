@@ -1,5 +1,19 @@
 # Sentiment Analysis Using VADER and TextBlob
 
+# TL;DR
+
+**Objective:** Evaluate and compare the performance of VADER and TextBlob for classifying sentiment (Positive, Neutral, Negative) in textual reviews.
+
+**Project Steps and Used Methods:** 
+- Exploratory data analysis and visualiztion
+- Developing an outlier detection method
+- Building preprocessing pipeline (tokenization, stopword cleaning, outlier removal)
+- VADER and Textblob model comparison
+- Sentiment classification
+- Performance evaluation and visualization (accuracy, precision, recall and F1-score)
+
+**Used Libraries:** Pandas, nltk, VaderSentiment, Textblob, Scikit-learn, Matplotlib, Seaborn 
+
 ## Project Description
 
 This project evaluates the performance of two popular natural language processing tools, **VADER** and **TextBlob**, for sentiment analysis. Using a dataset of textual reviews with ground truth sentiment labels, the project aims to classify sentiments as Positive, Neutral, or Negative and compare the strengths and weaknesses of both tools.
@@ -78,7 +92,7 @@ The dataset includes reviews with the following key columns:
 2. **Locate The Folder**
    
    `cd /Portfolio/Amazon_Reviews_Sentiment_Analysis`
-   
+
 3. **Install Dependencies**
 
     `pip install -r requirements.txt`
